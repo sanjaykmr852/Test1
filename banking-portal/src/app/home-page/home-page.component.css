@@ -1,0 +1,12 @@
+#password-div{
+    padding-top:12px;
+    padding-bottom:12px;
+}
+
+input.ng-invalid.ng-touched{
+    border: 1px solid red;
+}
+
+.error-text{
+color :red;
+}

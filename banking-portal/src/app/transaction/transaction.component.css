@@ -1,0 +1,20 @@
+
+.keep-right{
+    float:right;
+}
+
+.padding-transaction{
+    padding-right: 37px;;
+}
+.default-padding{
+    padding-top: 16px;
+    padding-bottom: 16px;
+}
+
+.table-color{
+    background-color: white;
+}
+
+.container-margin-left{
+    margin-left: 112px;
+}

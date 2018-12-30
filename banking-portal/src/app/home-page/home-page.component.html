@@ -1,0 +1,37 @@
+<div class="container">
+  <div class="row">
+    <div class="col-sm-9 col-md-12 col-lg-5 mx-auto">
+      <div class="card card-signin my-5">
+        <div class="card-body">
+          <h5 class="card-title text-center">Sign In</h5>
+          <span *ngIf="!isValid&& formData.submitted" class="error-text">Invalid Credentials!</span>
+          <form (ngSubmit)="onSumbit()" #form="ngForm">
+            <div class="form-label-group">
+              <label for="input-email">Email Address</label>
+              <input type="email" id="input-email" class="form-control"
+               placeholder="Email Address" ngModel name="email" required #email="ngModel" email>
+               <span *ngIf="email.touched&&email.invalid&&email.errors.required" class="error-text">Enter emailAddress!</span>
+               <span *ngIf="email.touched&&email.invalid&&email.errors.email" class="error-text">Enter Valid Email Address!</span>
+                </div>
+            <div id="password-div"  class="form-label-group">
+                <label for="input-password">Password</label>
+              <input type="password" id="input-password" class="form-control" placeholder="Password"
+               required ngModel name="password" #password="ngModel" required>
+               <span *ngIf="password.invalid&&password.touched" class="error-text">Enter Password!</span>
+            </div>
+
+            <div class="custom-control custom-checkbox mb-3">
+              <input type="checkbox" class="custom-control-input" id="remember-password-checkbox">
+              <label class="custom-control-label" for="remember-password-checkbox">Remember password</label>
+            </div>
+            <button class="btn btn-lg btn-primary btn-block text-uppercase" [disabled]="!form.valid">Sign in</button>
+            <hr>
+            <div class="custom-control custom-checkbox mb-3">
+              <a href="" id="forgot-password-checkbox">Forgot password</a>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
